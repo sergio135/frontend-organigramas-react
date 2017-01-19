@@ -1,0 +1,41 @@
+.box-area{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+
+.box-area.down{
+    flex-direction: column;
+}
+.box-area.left{
+    flex-direction: row-reverse;
+}
+.box-area.right{
+    flex-direction: row;
+}
+
+
+.box-area .space-box-area {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    min-height: 30px;
+    min-width: 40px;
+}
+.box-area .space-box-area .fase1 {
+    flex-grow: 1;
+    background-color: blue;
+}
+.box-area .space-box-area .fase2 {
+    flex-grow: 1;
+    background-color: red;
+}
+
+.box-area.down .space-box-area {flex-direction: row;}
+.box-area.left .space-box-area {flex-direction: column;}
+.box-area.right .space-box-area {flex-direction: column;}

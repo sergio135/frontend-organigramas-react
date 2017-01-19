@@ -1,0 +1,16 @@
+.box {
+ background-color: #cccccc;
+ border: 1px solid #2e2e2e;
+}
+
+.box.small {
+    width: 200px;
+}
+.box.medium {
+    width: 240px;
+}
+.box.big {
+    width: 280px;
+}
+
+

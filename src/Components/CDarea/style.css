@@ -1,0 +1,13 @@
+.cd-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.cd-area p {
+    margin: 0;
+    padding: 0;
+}

@@ -4,7 +4,7 @@ class DivisionPage extends Component {
     render () {
         /* jshint ignore:start */
         return(
-            <div>Componente Division</div>
+            <h1>Componente Division</h1>
         );
         /* jshint ignore:end */
     }

@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
+import BoxArea from '../BoxGroup/BoxArea';
+
+import './style.css';
+
 class CDarea extends Component {
     render () {
         /* jshint ignore:start */
         return(
-            <div>Componente CDarea</div>
+            <div className="cd-area">
+                <BoxArea spaceAlign="down"/>
+            </div>
         );
         /* jshint ignore:end */
     }
