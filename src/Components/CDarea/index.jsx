@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import BoxArea from '../BoxGroup/BoxArea';
-
 import './style.css';
 
 class CDarea extends Component {
@@ -9,7 +7,7 @@ class CDarea extends Component {
         /* jshint ignore:start */
         return(
             <div className="cd-area">
-                <BoxArea spaceAlign="down"/>
+                <BoxArea spaceAlign="down" size="medium"/>
             </div>
         );
         /* jshint ignore:end */
