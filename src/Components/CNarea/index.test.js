@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CTarea from './';
+import CNarea from './';
 
-describe('CTarea Component', () => {
+describe('CNarea Component', () => {
     it('Renderizar sin Crash', () => {
-        shallow(<CTarea />);
+        shallow(<CNarea />);
     });
 });

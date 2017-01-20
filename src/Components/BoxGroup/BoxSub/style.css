@@ -1,0 +1,14 @@
+.box-sub-area {
+    display: flex;
+    
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    border-left: 4px solid #2e2e2e;
+}
+
+.box-sub-area .box-area {
+    margin-top: 30px;
+}

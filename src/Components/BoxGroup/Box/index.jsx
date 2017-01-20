@@ -7,18 +7,23 @@ class Box extends Component {
         /* jshint ignore:start */
         return(
             <div className={`box ${this.props.size}`}>
-                <div>
-                    <img src=""/>
+                <div className="photo-area">
+                    <span style={this.props.photo}/>
                 </div>
-                <div>
-                    <p>Javier fernandez</p>
-                    <p>Direccion general</p>
+                <div className="info-area">
+                    <p className="name">{this.props.name}</p>
+                    <p className="cargo">{this.props.cargo}</p>
                 </div>
-            Componente Box
             </div>
         );
         /* jshint ignore:end */
     }
 }
+
+Box.defaultProps = {
+    photo: { backgroundImage: `url(https://intranet.cupagroup.com/cupire-padesa/directory/images/retratos/javier-fernandez.jpg)` },
+    name: 'Nombre Apellidos',
+    cargo: 'Tecnico de algo'
+};
 
 export default Box;

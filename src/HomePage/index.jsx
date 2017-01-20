@@ -12,8 +12,7 @@ class HomePage extends Component {
     render () {
         /* jshint ignore:start */
         return(
-            <div>
-                <h1>Componente Home</h1>
+            <div className="home-component">
                 <CDarea/>
                 <div className="flex-area">
                     <CMDarea/>

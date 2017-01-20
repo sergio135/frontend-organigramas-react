@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Box from '../Box';
+import BoxSub from '../BoxSub';
 import './style.css';
 
 class BoxArea extends Component {
@@ -8,7 +9,7 @@ class BoxArea extends Component {
         return(
             <div className={`box-area ${this.props.spaceAlign}`}>
                 {this.props.isHaveChild ? (
-                    'ola k ases'
+                    <BoxSub size={this.props.size}/>
                 ) : (
                     <Box size={this.props.size}/>
                 )}

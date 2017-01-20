@@ -7,7 +7,7 @@ class CDarea extends Component {
         /* jshint ignore:start */
         return(
             <div className="cd-area">
-                <BoxArea spaceAlign="down" size="medium"/>
+                <BoxArea spaceAlign="down" size="big"/>
             </div>
         );
         /* jshint ignore:end */

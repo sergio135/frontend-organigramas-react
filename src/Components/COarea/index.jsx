@@ -7,7 +7,7 @@ class COarea extends Component {
         /* jshint ignore:start */
         return(
             <div className="co-area">
-                <BoxArea spaceAlign="right" size="medium" isHaveChild={true}/>
+                <BoxArea spaceAlign="top" size="medium" isHaveChild={true}/>
             </div>
         );
         /* jshint ignore:end */

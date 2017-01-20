@@ -1,0 +1,15 @@
+.ct-area {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    border-top: 4px solid #2e2e2e;
+}
+
+.ct-area .box-area {
+    margin-bottom: 0px;
+}

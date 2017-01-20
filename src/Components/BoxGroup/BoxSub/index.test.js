@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CTarea from './';
+import BoxSub from './';
 
-describe('CTarea Component', () => {
+describe('BoxSub Component', () => {
     it('Renderizar sin Crash', () => {
-        shallow(<CTarea />);
+        shallow(<BoxSub />);
     });
 });
