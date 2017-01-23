@@ -22,7 +22,7 @@ class Box extends Component {
 
 Box.defaultProps = {
     photo: { backgroundImage: `url(https://intranet.cupagroup.com/cupire-padesa/directory/images/retratos/javier-fernandez.jpg)` },
-    name: 'Nombre Apellidos',
+    name: 'Nombre hola',
     cargo: 'Tecnico de algo'
 };
 
