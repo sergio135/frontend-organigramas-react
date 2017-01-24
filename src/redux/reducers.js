@@ -1,12 +1,54 @@
 import { combineReducers } from 'redux';
 
-function mainReducer (state = {}, action) {
+function CDReducer (state = {}, action) {
     switch (action.type) {
-        case 'action':
-
-        default:
+    case 'CD-AJAX':
+        const copy = Object.assign(state, action.payload);
+        return copy;
+    default:
+        return state;
     }
 }
 
-const reducers = combineReducers({ mainReducer });
+function CMDReducer (state = {}, action) {
+    switch (action.type) {
+    case 'CMD-AJAX':
+        const copy = Object.assign(state, action.payload);
+        return copy;
+    default:
+        return state;
+    }
+}
+
+function CMIReducer (state = {}, action) {
+    switch (action.type) {
+    case 'CMI-AJAX':
+        const copy = Object.assign(state, action.payload);
+        return copy;
+    default:
+        return state;
+    }
+}
+
+function CNReducer (state = {}, action) {
+    switch (action.type) {
+    case 'CN-AJAX':
+        const copy = Object.assign(state, action.payload);
+        return copy;
+    default:
+        return state;
+    }
+}
+
+function COReducer (state = {}, action) {
+    switch (action.type) {
+    case 'CO-AJAX':
+        const copy = Object.assign(state, action.payload);
+        return copy;
+    default:
+        return state;
+    }
+}
+
+const reducers = combineReducers({ CDReducer, CMDReducer, CMIReducer, CNReducer, COReducer, });
 export default reducers;
