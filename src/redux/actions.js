@@ -32,3 +32,10 @@ export function coAjax(text) {
         payload: text 
     };
 }
+
+export function ctAjax(text) {
+    return { 
+        type: 'CT-AJAX', 
+        payload: text 
+    };
+}

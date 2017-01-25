@@ -11,8 +11,14 @@ class BoxArea extends Component {
                 {this.props.isHaveChild ? (
                     <BoxSub size={this.props.size}/>
                 ) : (
-                    <Box size={this.props.size}/>
+                    <Box 
+                        size={this.props.size}
+                        puesto={this.props.puesto} 
+                        user={this.props.user}
+                        userName={this.props.userName}
+                    />
                 )}
+                
                 <div className="space-box-area">
                     <div className="fase1"></div>
                     <div className="fase2"></div>

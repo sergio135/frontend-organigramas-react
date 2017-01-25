@@ -9,8 +9,8 @@ class DivisionPage extends Component {
         /* jshint ignore:start */
         return(
             <div className="division-component">
-                <CDarea/>
-                <CTarea/>
+                <CDarea id={this.props.params.id}/>
+                <CTarea id={this.props.params.id}/>
             </div>
         );
         /* jshint ignore:end */

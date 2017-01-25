@@ -5,14 +5,15 @@ import './style.css';
 class Box extends Component {
     render () {
         /* jshint ignore:start */
+        let photo = {backgroundImage: `url(https://intranet.cupagroup.com/cupire-padesa/users/ShowUserJpegPhoto.do?userLogin=${this.props.user})`}
         return(
             <div className={`box ${this.props.size}`}>
                 <div className="photo-area">
-                    <span style={this.props.photo}/>
+                    <span style={photo}/>
                 </div>
                 <div className="info-area">
-                    <p className="name">{this.props.name}</p>
-                    <p className="cargo">{this.props.cargo}</p>
+                    <p className="name">{this.props.userName}</p>
+                    <p className="cargo">{this.props.puesto}</p>
                 </div>
             </div>
         );
@@ -21,9 +22,9 @@ class Box extends Component {
 }
 
 Box.defaultProps = {
-    photo: { backgroundImage: `url(https://intranet.cupagroup.com/cupire-padesa/directory/images/retratos/javier-fernandez.jpg)` },
-    name: 'Nombre hola',
-    cargo: 'Tecnico de algo'
+    user: 'test',
+    userName: 'Nombre hola',
+    puesto: 'Tecnico de algo'
 };
 
 export default Box;

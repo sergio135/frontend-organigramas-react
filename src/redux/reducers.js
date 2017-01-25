@@ -3,52 +3,170 @@ import { combineReducers } from 'redux';
 function CDReducer (state = {}, action) {
     switch (action.type) {
     case 'CD-AJAX':
-        const copy = Object.assign(state, action.payload);
-        return copy;
+        return Object.assign({}, state, {
+            data: {
+                id:action.payload.id, 
+                puesto:action.payload.nombre, 
+                padre:action.payload.padre, 
+                page:action.payload.pagina 
+            },
+            user: {
+                userName:action.payload.user.nombre, 
+                user:action.payload.user.user
+            },
+            users: action.payload.usuarios.map(rest => {
+                return {
+                    userName: rest.nombre,
+                    user: rest.user
+                };
+            })
+        });
+        
     default:
         return state;
     }
 }
 
-function CMDReducer (state = {}, action) {
+function CMDReducer (state = [], action) {
     switch (action.type) {
     case 'CMD-AJAX':
-        const copy = Object.assign(state, action.payload);
-        return copy;
+        return Object.assign({}, state, {
+            data: {
+                id:action.payload.id, 
+                puesto:action.payload.nombre, 
+                padre:action.payload.padre, 
+                page:action.payload.pagina 
+            },
+            user: {
+                userName:action.payload.user.nombre, 
+                user:action.payload.user.user
+            },
+            users: action.payload.usuarios.map(rest => {
+                return {
+                    userName: rest.nombre,
+                    user: rest.user
+                };
+            })
+        });
+
     default:
         return state;
     }
 }
 
-function CMIReducer (state = {}, action) {
+function CMIReducer (state = [], action) {
     switch (action.type) {
     case 'CMI-AJAX':
-        const copy = Object.assign(state, action.payload);
-        return copy;
+        return Object.assign({}, state, {
+            data: {
+                id:action.payload.id, 
+                puesto:action.payload.nombre, 
+                padre:action.payload.padre, 
+                page:action.payload.pagina 
+            },
+            user: {
+                userName:action.payload.user.nombre, 
+                user:action.payload.user.user
+            },
+            users: action.payload.usuarios.map(rest => {
+                return {
+                    userName: rest.nombre,
+                    user: rest.user
+                };
+            })
+        });
+
     default:
         return state;
     }
 }
 
-function CNReducer (state = {}, action) {
+function CNReducer (state = [], action) {
     switch (action.type) {
     case 'CN-AJAX':
-        const copy = Object.assign(state, action.payload);
-        return copy;
+        return Object.assign([], state, action.payload.map(rest => {
+            return {
+                data: {
+                    id:rest.id, 
+                    puesto:rest.nombre, 
+                    padre:rest.padre, 
+                    page:rest.pagina 
+                },
+                user: {
+                    userName:rest.user.nombre, 
+                    user:rest.user.user
+                },
+                users: rest.usuarios.map(rest => {
+                    return {
+                        userName: rest.nombre,
+                        user: rest.user
+                    };
+                })
+            };
+        }));
+
     default:
         return state;
     }
 }
 
-function COReducer (state = {}, action) {
+function COReducer (state = [], action) {
     switch (action.type) {
     case 'CO-AJAX':
-        const copy = Object.assign(state, action.payload);
-        return copy;
+        return Object.assign([], state, action.payload.map(rest => {
+            return {
+                data: {
+                    id:rest.id, 
+                    puesto:rest.nombre, 
+                    padre:rest.padre, 
+                    page:rest.pagina 
+                },
+                user: {
+                    userName:rest.user.nombre, 
+                    user:rest.user.user
+                },
+                users: rest.usuarios.map(rest => {
+                    return {
+                        userName: rest.nombre,
+                        user: rest.user
+                    };
+                })
+            };
+        }));
+
     default:
         return state;
     }
 }
 
-const reducers = combineReducers({ CDReducer, CMDReducer, CMIReducer, CNReducer, COReducer, });
+function CTReducer (state = [], action) {
+    switch (action.type) {
+    case 'CT-AJAX':
+        return Object.assign([], state, action.payload.map(rest => {
+            return {
+                data: {
+                    id:rest.id, 
+                    puesto:rest.nombre, 
+                    padre:rest.padre, 
+                    page:rest.pagina 
+                },
+                user: {
+                    userName:rest.user.nombre, 
+                    user:rest.user.user
+                },
+                users: rest.usuarios.map(rest => {
+                    return {
+                        userName: rest.nombre,
+                        user: rest.user
+                    };
+                })
+            };
+        }));
+
+    default:
+        return state;
+    }
+}
+
+const reducers = combineReducers({ CDReducer, CMDReducer, CMIReducer, CNReducer, COReducer, CTReducer });
 export default reducers;
