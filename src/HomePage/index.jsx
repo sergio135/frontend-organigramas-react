@@ -18,7 +18,7 @@ class HomePage extends Component {
                     <CMIarea id={3}/>
                 </div>
                 <div className="flex-area">
-                    <COarea id={76}/>
+                    <COarea id={4}/>
                     <CNarea id={5}/>
                 </div>
             </div>
