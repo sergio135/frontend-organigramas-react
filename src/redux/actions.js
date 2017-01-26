@@ -33,6 +33,13 @@ export function coAjax(text) {
     };
 }
 
+export function coAjaxChild(text) {
+    return { 
+        type: 'CO-AJAX-CHILD', 
+        payload: text 
+    };
+}
+
 export function ctAjax(text) {
     return { 
         type: 'CT-AJAX', 

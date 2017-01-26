@@ -23,6 +23,20 @@ class CTarea extends Component {
         });
     }
 
+    componentDidUpdate(prevProps,prevState){
+        if (prevProps.id !== this.props.id) {
+            console.log('cambio la ruta CT');
+            fetch(`https://orga.cupagroup.com:1337/division?padre=${this.props.id}`)
+            .then( rest => {
+                return rest.json();
+            })
+            .then( rest => {
+                this.props.dispatch( ctAjax(rest) );
+            });
+        }
+    }
+    
+
     render () {
         /* jshint ignore:start */
         return(
@@ -36,6 +50,9 @@ class CTarea extends Component {
                     user={rest.user.user}
                     userName={rest.user.userName}
                     key={uuid.v4()}
+                    id={rest.data.id}
+                    page={rest.data.page}
+                    users={rest.users}
                     />
                 );
             })}

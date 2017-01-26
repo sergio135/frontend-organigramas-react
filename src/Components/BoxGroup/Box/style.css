@@ -37,7 +37,9 @@
     background-repeat: no-repeat;
 }
 
-
+.box a {
+    width: 100%;
+}
 
 .box .info-area {
     padding: 7% 5%;
@@ -76,4 +78,7 @@
     font-weight: 600;
 }
 
+.box-users .box-area {
+    margin-top: 5px;
+}
 

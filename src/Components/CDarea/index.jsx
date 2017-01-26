@@ -24,6 +24,19 @@ class CDarea extends Component {
         });
     }
 
+    componentDidUpdate(prevProps,prevState){
+        if (prevProps.id !== this.props.id) {
+            console.log('cambio la ruta CD');
+            fetch(`https://orga.cupagroup.com:1337/division?id=${this.props.id}`)
+            .then( rest => {
+                return rest.json();
+            })
+            .then( rest => {
+                this.props.dispatch( cdAjax(rest) );
+            });
+        }
+    }
+
     render () {
         /* jshint ignore:start */
         return(
@@ -34,6 +47,8 @@ class CDarea extends Component {
                     puesto={this.props.data.puesto} 
                     user={this.props.user.user}
                     userName={this.props.user.userName}
+                    id={this.props.data.id}
+                    page={false}
                 />
             </div>
         );

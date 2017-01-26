@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import uuid from 'uuid';
 import BoxArea from '../BoxGroup/BoxArea';
 import { coAjax } from '../../redux/actions';
 import './style.css';
 
 function mapStateToProps(state, props) {
-    return {
-        data: state.COReducer,
+    return { 
+        data: state.COReducer.data,
+        user: state.COReducer.user,
+        users: state.COReducer.users
     };
 }
 
@@ -27,23 +28,34 @@ class COarea extends Component {
         /* jshint ignore:start */
         return(
             <div className="co-area">
-            {this.props.data.map(rest => {
-                return(
-                    <BoxArea 
+                <BoxArea 
                     spaceAlign="top" 
                     size="medium"
                     isHaveChild={true}
-                    puesto={rest.data.puesto} 
-                    user={rest.user.user}
-                    userName={rest.user.userName}
-                    key={uuid.v4()}
-                    />
-                );
-            })}
+                    puesto={this.props.data.puesto} 
+                    user={this.props.user.user}
+                    userName={this.props.user.userName}
+                    id={this.props.data.id}
+                    page={this.props.data.page}        
+                />
             </div>
         );
         /* jshint ignore:end */
     }
 }
+
+COarea.defaultProps = {
+    data: { 
+        id: null,
+        padre: null,
+        page: false,
+        puesto: 'Cargando...'
+    },
+    user: {
+        user: null,
+        userName: 'Cargando...'
+    },
+    users: []
+};
 
 export default connect(mapStateToProps)(COarea);

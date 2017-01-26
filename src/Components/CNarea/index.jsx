@@ -30,12 +30,14 @@ class CNarea extends Component {
             {this.props.data.map(rest => {
                 return(
                     <BoxArea 
-                    spaceAlign="left" 
-                    size="medium"
-                    puesto={rest.data.puesto} 
-                    user={rest.user.user}
-                    userName={rest.user.userName}
-                    key={uuid.v4()}
+                        spaceAlign="left" 
+                        size="medium"
+                        puesto={rest.data.puesto} 
+                        user={rest.user.user}
+                        userName={rest.user.userName}
+                        key={uuid.v4()}
+                        id={rest.data.id}
+                        page={rest.data.page}
                     />
                 );
             })}

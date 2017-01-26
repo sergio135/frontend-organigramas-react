@@ -34,6 +34,8 @@ class CMIarea extends Component {
                     puesto={this.props.data.puesto} 
                     user={this.props.user.user}
                     userName={this.props.user.userName}
+                    id={this.props.data.id}
+                    page={this.props.data.page}
                 />
             </div>
         );
