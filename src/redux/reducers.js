@@ -162,6 +162,10 @@ function COReducer (state = [], action) {
 function CTReducer (state = [], action) {
     switch (action.type) {
     case 'CT-AJAX':
+        let comp = Array.isArray(action.payload);
+        if (!comp) {
+            action.payload = [action.payload];
+        }
         return Object.assign([], action.payload.map(rest => {
             return {
                 data: {
