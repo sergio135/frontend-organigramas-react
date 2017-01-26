@@ -15,9 +15,9 @@ class BoxArea extends Component {
 
     componentDidUpdate(prevProps,prevState) {
         if (this.props.isHaveChild) {
-            console.log('tiene hijos');
+            //console.log('tiene hijos');
             if (prevProps.id !== this.props.id) {
-                console.log('cambio id');
+                //console.log('cambio id');
                 fetch(`https://orga.cupagroup.com:1337/division?padre=${this.props.id}`)
                 .then( rest => {
                     return rest.json();

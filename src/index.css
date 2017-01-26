@@ -4,3 +4,9 @@ body {
   font-family: sans-serif;
   width: 790px;
 }
+
+a { color: #2e2e2e; text-decoration: none; }
+a:link { color: #2e2e2e; text-decoration: none }
+a:visited { color: #2e2e2e; text-decoration: none }
+a:hover { color: #aaaaaa; text-decoration: none }
+a:active { color: #2e2e2e; text-decoration: none }
